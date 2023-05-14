@@ -1,4 +1,7 @@
-# LittleFarm
+> <h1>Litter Farm App</h1>
+ > Status: desenvolvendo.</br>
+ ![Header](https://github.com/nailtonsimoes/little-farm-app/assets/44982114/97f3dcfa-92b4-4c2f-a744-5776d9736d0e)
+</br>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
 
