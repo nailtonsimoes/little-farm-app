@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  valorEntrada: number = 0;
+  valorSaida: number = 0;
+  valorTotal: number = 0;
 
   constructor() { }
 

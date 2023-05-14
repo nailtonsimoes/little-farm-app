@@ -12,6 +12,15 @@ import { UpdateComponent } from './components/transaction/update/update.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { CreateUserComponent } from './components/login/create-user/create-user.component';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { CardEntradaComponent } from './components/cards/card-entrada';
+import { CardSaidaComponent } from './components/cards/card-saida';
+import { MatIconModule } from '@angular/material/icon';
+import { CardTotalComponent } from './components/cards/card-total';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,12 +30,20 @@ import { CreateUserComponent } from './components/login/create-user/create-user.
     ReadAllComponent,
     CreateComponent,
     UpdateComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    HeaderComponent,
+    FooterComponent,
+    CardEntradaComponent,
+    CardSaidaComponent,
+    CardTotalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,45 @@
+img {
+  height: 3rem;
+}
+
+mat-toolbar {
+  background-image: linear-gradient(
+    to top,
+    rgb(14, 116, 36),
+    rgb(21, 141, 89)
+  );
+  height: 100px;
+}
+
+.top-div {
+  background-image: linear-gradient(to top, rgb(14, 116, 36), rgb(21, 141, 89));
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header {
+  justify-content: center;
+  height: 60%;
+}
+
+.logo {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: azure;
+}
+
+spam {
+  display: flex;
+  align-items: center;
+}
+
+h1{
+  padding-left: 1.2rem;
+  font-weight: 500;
+  font-family:'Poppins', sans-serif;
+  color: rgb(255, 255, 255);
+}
