@@ -3,26 +3,23 @@ img {
 }
 
 mat-toolbar {
-  background-image: linear-gradient(
-    to top,
-    rgb(14, 116, 36),
-    rgb(21, 141, 89)
-  );
+  background-color: transparent !important;
   height: 100px;
 }
 
 .top-div {
   background-image: linear-gradient(to top, rgb(14, 116, 36), rgb(21, 141, 89));
-  height: 150px;
+  height: 300px;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Adicionado para organizar os elementos em coluna */
+  justify-content: flex-start; /* Alinha os elementos no topo */
   align-items: center;
 }
 
-
 .header {
   justify-content: center;
-  height: 60%;
+  height: 130px;
+  margin-top: 30px;
 }
 
 .logo {
@@ -32,14 +29,14 @@ mat-toolbar {
   background-color: azure;
 }
 
-spam {
+span {
   display: flex;
   align-items: center;
 }
 
-h1{
+h1 {
   padding-left: 1.2rem;
   font-weight: 500;
-  font-family:'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: rgb(255, 255, 255);
 }

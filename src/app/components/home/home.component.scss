@@ -19,7 +19,7 @@ mat-card {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: -4rem;
   gap: 20px;
 }
 
@@ -47,4 +47,15 @@ mat-card {
   .card {
     width: 90%;
   }
+}
+
+.add-btn{
+  margin-left: 9rem;
+  margin-top: 3rem;
+  width: 15rem;
+  font-size: 18px;
+  font-weight: bold;
+  align-items: center;
+  background-color: #1a7945 !important;
+  color: #d4f4d8;
 }
