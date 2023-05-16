@@ -1,0 +1,29 @@
+.demo-table {
+  width: 90%;
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #999999;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+
+.demo-table th, .demo-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.demo-table th {
+  background-color: #f2f2f2;
+}
+
+.demo-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.demo-table tr:hover {
+  background-color: #e5e5e5;
+}

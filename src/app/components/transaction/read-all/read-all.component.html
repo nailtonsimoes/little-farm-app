@@ -1,1 +1,14 @@
-<p>read-all works!</p>
+<table class="mat-elevation-z8 demo-table">
+  <tr>
+    <th>ID</th>
+    <th>Tipo de Transação</th>
+    <th>Descrição</th>
+    <th>Data da transação</th>
+  </tr>
+  <tr *ngFor="let transaction of finalDataSource">
+    <td>{{ transaction.id }}</td>
+    <td>{{ transaction.type }}</td>
+    <td>{{ transaction.description }}</td>
+    <td>{{ transaction.createdAt | date }}</td>
+  </tr>
+</table>

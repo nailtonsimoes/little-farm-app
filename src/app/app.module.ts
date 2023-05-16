@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,10 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { CardEntradaComponent } from './components/cards/card-entrada';
 import { CardSaidaComponent } from './components/cards/card-saida';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { CardTotalComponent } from './components/cards/card-total';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -40,10 +44,14 @@ import { CardTotalComponent } from './components/cards/card-total';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
+    MatTableModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
