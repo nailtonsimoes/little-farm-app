@@ -31,6 +31,7 @@ import { Component, Input } from '@angular/core';
       margin-bottom: 10px;
       display: flex;
       align-items: center;
+      color: #FFFFFF;
     }
     .card-header .icon {
       font-size: 28px;
