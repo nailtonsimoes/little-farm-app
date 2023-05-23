@@ -24,4 +24,12 @@ export class ReadAllComponent implements OnInit {
     ];
   }
 
+  editTransaction(){
+    console.log('editei o bruto');
+  }
+
+  deleteTransaction(){
+    console.log('Apaguei o bruto');
+  }
+
 }

@@ -4,11 +4,21 @@
     <th>Tipo de Transação</th>
     <th>Descrição</th>
     <th>Data da transação</th>
+    <th>Ações</th>
+    <!-- Nova coluna para os botões -->
   </tr>
   <tr *ngFor="let transaction of finalDataSource">
     <td>{{ transaction.id }}</td>
     <td>{{ transaction.type }}</td>
     <td>{{ transaction.description }}</td>
     <td>{{ transaction.createdAt | date }}</td>
+    <td>
+      <button mat-raised-button color="primary" (click)="editTransaction()" style="margin-right: 8px;">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button mat-raised-button color="warn" (click)="deleteTransaction()">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </td>
   </tr>
 </table>
