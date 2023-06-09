@@ -27,7 +27,7 @@ import { Component, Input } from '@angular/core';
     }
     .card-header {
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 500;
       margin-bottom: 10px;
       display: flex;
       align-items: center;

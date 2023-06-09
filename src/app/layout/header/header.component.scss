@@ -4,12 +4,12 @@ img {
 
 mat-toolbar {
   background-color: transparent !important;
-  height: 100px;
+  height: 50px;
 }
 
 .top-div {
   background-image: linear-gradient(to top, rgb(14, 116, 36), rgb(21, 141, 89));
-  height: 300px;
+  height: 223px;
   display: flex;
   flex-direction: column; /* Adicionado para organizar os elementos em coluna */
   justify-content: flex-start; /* Alinha os elementos no topo */
@@ -18,7 +18,7 @@ mat-toolbar {
 
 .header {
   justify-content: center;
-  height: 130px;
+  height: 100px;
   margin-top: 30px;
 }
 
@@ -37,6 +37,7 @@ span {
 h1 {
   padding-left: 1.2rem;
   font-weight: 500;
+  font-size: 2rem;
   font-family: "Poppins", sans-serif;
   color: rgb(255, 255, 255);
 }

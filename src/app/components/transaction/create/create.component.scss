@@ -1,0 +1,64 @@
+.create-card {
+  width: 70%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 30px;
+}
+
+.form-field {
+  width: 100%;
+  margin: 0.5rem auto;
+}
+
+.btn-create-box mat-card-actions {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.mat-card-actions button {
+  width: 45%;
+  padding: 0.5rem 2rem;
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.btn-create-box{
+  margin-top: 4rem;
+}
+
+.btn-voltar {
+  font-size: 22px;
+  background: rgb(14, 116, 36);
+  color: aliceblue;
+
+}
+
+.btn-voltar:hover {
+  color: rgb(14, 116, 36);
+  background: aliceblue;
+}
+
+.btn-create {
+  font-size: 22px;
+  color: rgb(14, 116, 36);
+}
+
+.btn-create:hover {
+  background: rgb(14, 116, 36);
+  color: aliceblue;
+}
+
+.mat-card-title {
+  padding-left: 1.2rem;
+  font-weight: 500;
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(14, 116, 36);
+  margin-bottom: 5rem;
+}

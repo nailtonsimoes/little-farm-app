@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      name: ['', Validators.required, Validators.minLength(3)],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required, Validators.minLength(6)]
+    });
+   }
 
   ngOnInit(): void {
+  }
+
+  cadastrarTransacao(): void {
+    alert('cadastrado!');
   }
 
 }
