@@ -41,6 +41,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { LoginService } from './services/login.service';
 
 
 @NgModule({
@@ -88,7 +89,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     provideStorage(() => getStorage()),
   ],
   providers: [
-    ScreenTrackingService,UserTrackingService
+    ScreenTrackingService,UserTrackingService,LoginService
   ],
   bootstrap: [AppComponent]
 })
