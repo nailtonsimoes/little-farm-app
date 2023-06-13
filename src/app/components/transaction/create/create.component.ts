@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TypeName } from 'src/app/enums/type-name';
+import { Transaction } from 'src/app/models/transaction';
 
 @Component({
   selector: 'app-create',
@@ -10,11 +12,19 @@ export class CreateComponent implements OnInit {
 
   form: FormGroup;
 
+  transaction: Transaction = {
+    type: TypeName.Entrace,
+    value: 0,
+    description: '',
+    createdAt: new Date()
+  }
+
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      name: ['', Validators.required, Validators.minLength(3)],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required, Validators.minLength(6)]
+      type: ['', [Validators.required, Validators.minLength(3)]],
+      value: ['', [Validators.required, Validators.email]],
+      description: [''],
+      createdAt: ['']
     });
    }
 
@@ -25,4 +35,8 @@ export class CreateComponent implements OnInit {
     alert('cadastrado!');
   }
 
+  formataData(): void {
+    let data = new Date(this.transaction.createdAt);
+    this.transaction.createdAt = `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
+  }
 }

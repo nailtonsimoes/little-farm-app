@@ -1,5 +1,4 @@
 <mat-card class="mat-elevation-z8 create-card">
-
   <mat-card-header>
     <mat-card-title class="mat-card-title">Criar Nova Transação</mat-card-title>
   </mat-card-header>
@@ -10,47 +9,60 @@
         <input
           matInput
           type="text"
-          id="name"
-          name="name"
-          formControlName="name"
-          placeholder="Insira seu nome de Usuário"
+          id="type"
+          name="type"
+          formControlName="type"
+          placeholder="Tipo de transação"
         />
-        <mat-error *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)">
-          O campo nome é obrigatório.
+        <mat-error
+          *ngIf="
+            form.controls['type'].invalid &&
+            (form.controls['type'].dirty || form.controls['type'].touched)
+          "
+        >
+          O tipo de transação é obrigatório.
         </mat-error>
       </mat-form-field>
       <mat-form-field class="form-field">
         <input
           matInput
-          type="email"
-          id="email"
-          name="email"
-          formControlName="email"
-          placeholder="Insira seu Email"
+          type="number"
+          id="value"
+          name="value"
+          formControlName="value"
+          placeholder="Insira o valor da transação"
         />
-        <mat-error *ngIf="form.controls['email'].invalid && (form.controls['email'].dirty || form.controls['email'].touched)">
-          O campo email é obrigatório e precisa ser um email válido.
+        <mat-error
+          *ngIf="
+            form.controls['value'].invalid &&
+            (form.controls['value'].dirty || form.controls['value'].touched)
+          "
+        >
+          O valor da transação é obrigatório.
         </mat-error>
       </mat-form-field>
       <mat-form-field class="form-field">
         <input
           matInput
-          type="password"
-          id="password"
-          name="password"
-          formControlName="password"
-          placeholder="Insira sua Senha"
+          type="text"
+          id="description"
+          name="description"
+          formControlName="description"
+          placeholder="Insira uma descrição"
         />
-        <mat-error *ngIf="form.controls['password'].invalid && (form.controls['password'].dirty || form.controls['password'].touched)">
-          O campo senha é obrigatório.
-        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="data-finalizar" appearance="fill">
+        <mat-label>Data para finalizar</mat-label>
+        <input matInput [matDatepicker]="dp3" formControlName="createdAt">
+        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3></mat-datepicker>
       </mat-form-field>
     </mat-card-content>
-    <div class="btn-create-box">
-      <mat-card-actions>
-        <button mat-raised-button type="submit" class="btn-create">Cadastrar Transação</button> <br/>
-        <button mat-raised-button routerLink="" class="btn-voltar">Voltar</button>
-      </mat-card-actions>
-    </div>
+    <mat-card-actions class="btn-create-box">
+      <button mat-raised-button type="submit" class="btn-create">
+        Cadastrar Transação
+      </button>
+      <button mat-raised-button routerLink="" class="btn-voltar">Voltar</button>
+    </mat-card-actions>
   </form>
 </mat-card>
