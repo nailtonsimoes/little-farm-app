@@ -18,8 +18,8 @@ export class ReadAllComponent implements OnInit {
   ngOnInit(): void {
     // Preencha a fonte de dados com os dados desejados
     this.finalDataSource = [
-      { id: 1, type: TypeName.Entrace, description: 'Some description', createdAt: new Date() },
-      { id: 2, type: TypeName.Exit, description: 'Other description', createdAt: new Date() },
+      { id: '1', type: TypeName.Entrace, value:20, description: 'Some description', createdAt: new Date() },
+      { id: '2', type: TypeName.Exit, value:10, description: 'Other description', createdAt: new Date() },
       // ...
     ];
   }

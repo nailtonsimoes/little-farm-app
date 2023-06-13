@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "littlefarmapp": {
+      "hosting": {
+        "little-farm": [
+          "littlefarmapp"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "littlefarmapp"
+  }
+}
