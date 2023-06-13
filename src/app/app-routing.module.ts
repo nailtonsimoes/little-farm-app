@@ -27,7 +27,7 @@ const routes: Routes = [
         component: UpdateComponent,
       }
     ],
-    canActivate:[]
+    canActivate:[AuthGuard]
   },
   {
     path: '',

@@ -1,0 +1,92 @@
+.login-card {
+    width: 400px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  img {
+    height: 3rem;
+  }
+  
+  h1{
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    color: rgb(14, 116, 36);
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  mat-card-header {
+    margin-bottom: .2rem;
+  }
+  
+  .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  .btn-login-box mat-card-actions {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .btn-login-box{
+   margin-top: 2rem;
+  }
+  
+  .mat-card-actions button {
+    width: 50%;
+    padding: 0.2rem 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .mat-card-actions button.btn-loginGoogle {
+    width: 70%;
+  }
+  
+  .btn-login {
+    font-size: 18px;
+    color: rgb(14, 116, 36);
+  }
+
+  .btn-loginGoogle {
+    font-size: 16px;
+    color: rgb(14, 116, 36);
+  }
+
+  .btn-login:hover {
+    background: rgb(14, 116, 36);
+    color: aliceblue;
+  }
+
+  .btn-loginGoogle:hover {
+    background: rgb(14, 116, 36);
+    color: aliceblue;
+  }
+  
+  .mat-card-title {
+    font-family: "Poppins", sans-serif;
+    color: rgb(14, 116, 36);
+    text-align: center;
+  }
+  
+  span a {
+    font-family: "Poppins", sans-serif;
+    color: rgb(14, 116, 36);
+  }
+  

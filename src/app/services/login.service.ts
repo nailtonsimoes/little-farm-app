@@ -35,4 +35,8 @@ export class LoginService {
     await this.auth.signOut();
       this.user = null;
   }
+
+  isUserLoggedIn(){
+    return true;
+  }
 }

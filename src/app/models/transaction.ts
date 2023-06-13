@@ -1,9 +1,9 @@
 import { TypeName } from "../enums/type-name";
 
 export interface Transaction {
-    id?: String,
+    id?: string,
     type?: TypeName,
     value: number;
-    description?: String,
+    description?: string,
     createdAt: any
 }
