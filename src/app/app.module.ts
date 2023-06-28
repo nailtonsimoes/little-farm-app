@@ -46,7 +46,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -78,6 +78,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
+    MatSnackBarModule,
     BrowserAnimationsModule,
     MatDatepickerModule,
     MatNativeDateModule,

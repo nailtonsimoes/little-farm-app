@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { LoginDto } from 'src/app/models/dtos/LoginDto';
 import { LoginService } from 'src/app/services/login.service';
@@ -14,32 +15,35 @@ export class LoginComponent implements OnInit {
     password: '',
   };
 
-  constructor(private service: LoginService, private router: Router) {}
+  constructor(public loginService: LoginService, private router: Router, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
 
   async authLoginByEmail() {
     try {
-      const res = await this.service.loginByEmail(this.login.email, this.login.password);
+      const res = await this.loginService.loginByEmail(this.login.email, this.login.password);
       console.log(`login efetuado:${res}`);
-      alert('Login feito com sucesso!');
       this.router.navigate(['']);
     } catch (err) {
       console.log(err);
-      alert('Erro na tentativa de Login..');
+      this.openSnackBar(`Erro na tentativa de login: ${err}`);
     }
   }
 
   async authLoginByGoogleAccount() {
     try {
-      const res = await this.service.googleSingnin();
+      const res = await this.loginService.googleSingnin();
       console.log(`login efetuado:${res}`);
-      alert('Login feito com sucesso!');
+      this.openSnackBar('Login feito com sucesso!');
       this.router.navigate(['']);
     } catch (err) {
       console.log(err);
-      alert('Erro na tentativa de Login..');
+      this.openSnackBar('Erro na tentativa de Login..');
     }
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, '', { duration: 3000 });
   }
 
 }

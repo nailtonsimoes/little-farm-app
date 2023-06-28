@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { TypeName } from 'src/app/enums/type-name';
 import { Transaction } from 'src/app/models/transaction';
 
@@ -19,7 +20,7 @@ export class CreateComponent implements OnInit {
     createdAt: new Date()
   }
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private _snackBar: MatSnackBar) {
     this.form = this.formBuilder.group({
       type: ['', [Validators.required, Validators.minLength(3)]],
       value: ['', [Validators.required, Validators.email]],
@@ -32,11 +33,15 @@ export class CreateComponent implements OnInit {
   }
 
   cadastrarTransacao(): void {
-    alert('cadastrado!');
+    this.openSnackBar('Cadastrado!');
   }
 
   formataData(): void {
     let data = new Date(this.transaction.createdAt);
     this.transaction.createdAt = `${data.getDate()}/${data.getMonth()+1}/${data.getFullYear()}`;
+  }
+
+  openSnackBar(message: string) {
+    this._snackBar.open(message, '', { duration: 3000 });
   }
 }
